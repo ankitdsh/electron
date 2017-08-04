@@ -676,8 +676,7 @@ void App::SelectClientCertificate(
 
   // Default to first certificate from the platform store.
   if (!prevent_default)
-    shared_delegate->ContinueWithCertificate(
-        cert_request_info->client_certs[0].get());
+    shared_delegate->ContinueWithCertificate(client_certs[0].get());
 }
 
 void App::OnGpuProcessCrashed(base::TerminationStatus status) {
